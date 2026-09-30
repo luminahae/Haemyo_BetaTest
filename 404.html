@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>이동 중…</title>
+  <script>
+    /* GitHub Pages 안전장치.
+       이 앱은 해시(#) 라우팅을 쓰므로 보통 새로고침 404가 없지만,
+       사용자가 실제 경로를 직접 입력한 경우를 대비해 앱 루트로 보낸다.
+       저장소 이름(base path)을 자동 계산해 프로젝트/사용자 페이지 모두 대응. */
+    (function () {
+      var seg = location.pathname.split('/').filter(Boolean);
+      // 프로젝트 페이지(user.github.io/repo/...)면 첫 세그먼트가 base
+      var base = (location.hostname.endsWith('github.io') && seg.length > 0) ? '/' + seg[0] + '/' : '/';
+      location.replace(base + '#/');
+    })();
+  </script>
+</head>
+<body>
+  <p style="font-family:sans-serif;color:#333;padding:24px;">홈으로 이동 중입니다… <a href="./">여기</a>를 눌러 주세요.</p>
+</body>
+</html>
